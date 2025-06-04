@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body 
+{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.banner 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #B3926F;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    overflow: hidden;
+}
+.banner::before 
+{
+    content: attr(data-text);
+    position: absolute;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 8em;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 1;
+    white-space: pre;
+}
+.banner::after 
+{
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 8em;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 2;
+    clip-path: circle(0px at var(--x) var(--y));
+    transition: clip-path 0.1;
+    background: url(bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    white-space: pre;
+}
+.banner:hover::after
+{
+    clip-path: circle(250px at var(--x) var(--y));
+}
+
+.scroll-section {
+  height: 100vh;
+  background-color: #F0D8B6;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.scroll-heading {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.scroll-paragraph {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: #B3926F; /* optional hover background */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.25rem; /* Adjust as needed */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: white !important;
+}
+
+.offcanvas {
+  background-color: #F0D8B6 !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+/* Dropdown menu background and border removal */
+.dropdown-menu {
+  background-color: #F0D8B6 !important;
+  border: none !important;
+  padding: 0;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Each dropdown item */
+.dropdown-item {
+  padding: 10px 20px;
+  color: #ffffff !important;
+  background-color: transparent;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Hover and focus effects for items */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #B3926F !important;
+  color: #ffffff !important;
+}
+
+/* Keep dropdown links aligned and consistent */
+.dropdown-menu .dropdown-item:active {
+  background-color: #F0D8B6 !important;
+  color: #ffffff !important;
+}
+
+.contact-footer {
+  background-color: #D1E2F3;
+  padding: 20px;
+  width: 100%;
+  margin-top: 0px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+  font-size: 1rem;
+}
+
+.contact-container h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contact-container p {
+  margin: 6px 0;
+}
+
+
+/* Slider Section */
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #F0D8B6;
+}
+
+.slider-wrapper {
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.box {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.box .item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  image-rendering: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.buttons button {
+  background-color: #D1E2F3;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #F0D8B6;
+}
+
+.buttons button:hover {
+  background-color: #F0D8B6;
+}
+
+.trial-dropdown {
+  background-color: #F0D8B6;
+  color: #4a3f35;
+  padding: 1rem;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.trial-dropdown.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.trial-btn {
+  background-color: #F0D8B6;
+  color: #4a3f35;
+  border-color: #4a3f35;
+}
+.trial-btn:hover {
+  background-color: #e0d4c2;
+  color: #2f261d;
+  border-color: #2f261d;
+}
+
+@media (max-width: 768px) {
+
+  .banner::before 
+{
+    content: attr(data-text);
+    position: absolute;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 1;
+    white-space: pre;
+}
+.banner::after 
+{
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 2;
+    clip-path: circle(0px at var(--x) var(--y));
+    transition: clip-path 0.1;
+    background: url(bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    white-space: pre;
+}
+.banner:hover::after
+{
+    clip-path: circle(125px at var(--x) var(--y));
+}
+  }
