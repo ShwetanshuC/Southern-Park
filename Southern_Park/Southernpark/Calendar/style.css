@@ -11,7 +11,3 @@ iframe {
     z-index: 0;
     position: relative;
 }
-
-.navbar .navbar-toggler {
-    position: center !important;
-}

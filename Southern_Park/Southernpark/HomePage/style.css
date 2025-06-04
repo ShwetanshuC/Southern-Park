@@ -50,7 +50,7 @@ body
     z-index: 2;
     clip-path: circle(0px at var(--x) var(--y));
     transition: clip-path 0.1;
-    background: url(images/bg.jpg);
+    background: url(images/bg.png);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -207,7 +207,7 @@ body
     z-index: 2;
     clip-path: circle(0px at var(--x) var(--y));
     transition: clip-path 0.1;
-    background: url(images/bg.jpg);
+    background: url(images/bg.png);
     background-size: cover;
     display: flex;
     justify-content: center;
