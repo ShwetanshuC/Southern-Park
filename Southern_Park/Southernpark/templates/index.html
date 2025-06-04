@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} My Home Page {% endblock %}
+{% block content %}
+ <div class="banner" data-text="&#32; &#32; &#32; &#32; &#32; &#32; We are &#xa; &#xa; Southern Park"></div>
+
+  <section class="scroll-section">
+    <div class="about-us-container">
+      <div class="about-text">
+        <h2 class="scroll-heading">Charlotte's Premier Music School</h2>
+        <p>
+          Southern Park Music School is a community music school, offering music instruction to students of all ages and experience since 1964.
+          Our goal at Southern Park Music School is to help people become musically literate. Music literacy involves the ability to read and
+          write music, and the ability to understand, perform, and create music.
+        </p>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="box">
+          <div class="item"><img src="{% static 'images/img1.jpg' %}" alt="img1"></div>
+          <div class="item"><img src="{% static 'images/img2.jpg' %}" alt="img2"></div>
+          <div class="item"><img src="{% static 'images/img3.jpg' %}" alt="img3"></div>
+          <div class="item"><img src="{% static 'images/img4.jpg' %}" alt="img4"></div>
+          <div class="item"><img src="{% static 'images/img5.jpg' %}" alt="img5"></div>
+          <div class="item"><img src="{% static 'images/img6.jpg' %}" alt="img6"></div>
+          <div class="item"><img src="{% static 'images/img7.jpg' %}" alt="img7"></div>
+        </div>
+        <div class="buttons">
+          <span class="prev">←</span>
+          <span class="next">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="contact-footer">
+    <div class="contact-container">
+      <h5>Contact Us</h5>
+      <p><strong>Phone:</strong> 704-676-1002</p>
+      <p><strong>Email:</strong> info@southernparkmusic.com</p>
+      <p><strong>Address:</strong> 123 Music Lane, Charlotte, NC 28202</p>
+    </div>
+  </footer>
+
+{% endblock %}
