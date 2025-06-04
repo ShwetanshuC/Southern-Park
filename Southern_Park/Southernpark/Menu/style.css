@@ -1,0 +1,86 @@
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: #B3926F; /* optional hover background */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.25rem; /* Adjust as needed */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: white !important;
+}
+
+.offcanvas {
+  background-color: #F0D8B6 !important;
+}
+
+/* Dropdown menu background and border removal */
+.dropdown-menu {
+  background-color: #F0D8B6 !important;
+  border: none !important;
+  padding: 0;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Each dropdown item */
+.dropdown-item {
+  padding: 10px 20px;
+  color: #ffffff !important;
+  background-color: transparent;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Hover and focus effects for items */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #B3926F !important;
+  color: #ffffff !important;
+}
+
+/* Keep dropdown links aligned and consistent */
+.dropdown-menu .dropdown-item:active {
+  background-color: #F0D8B6 !important;
+  color: #ffffff !important;
+}
+
+
+.trial-dropdown {
+  background-color: #F0D8B6;
+  color: #4a3f35;
+  padding: 1rem;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.trial-dropdown.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.trial-btn {
+  background-color: #F0D8B6;
+  color: #4a3f35;
+  border-color: #4a3f35;
+}
+.trial-btn:hover {
+  background-color: #e0d4c2;
+  color: #2f261d;
+  border-color: #2f261d;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} My Home Page {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Calendar/style.css' %}">
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=c_45cc094f4ecc9abdcf76aeec72e0ec7827f2afec4cdfbaee569121134630aa76%40group.calendar.google.com&ctz=America%2FNew_York" 
+          frameborder="0" 
+          scrolling="no">
+        </iframe>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"></script>
+{% endblock %}

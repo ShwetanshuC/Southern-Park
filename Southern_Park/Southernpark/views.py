@@ -4,3 +4,7 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
     return render(request, "index.html")
+def calendar(request):
+    return render(request, "calendar.html")
+def faculty(request):
+    return render(request, "faculty.html")

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Design | CSS Cards</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+{% block title %} My Home Page {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'Faculty/style.css' %}">
   <div class="container">
     <div class="faculty-group">
       <h2 class="section-title">Piano Faculty</h2>
@@ -192,5 +188,4 @@
       </div>
     </div>
   </div>
-</body>
-</html>
+{% endblock %}
