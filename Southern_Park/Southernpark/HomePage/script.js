@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', () => {
   let banner = document.querySelector('.banner');
   if (!banner) return;
@@ -35,5 +34,73 @@ window.addEventListener('DOMContentLoaded', () => {
       banner.style.setProperty('--x', x + 'px');
       banner.style.setProperty('--y', y + 'px');
     });
+  }
+
+  //slide
+
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  const slider = document.querySelector(".box");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+
+  const sliderItems = document.querySelectorAll(".box .item");
+
+  sliderItems.forEach(item => {
+    // Touch support
+    item.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    item.addEventListener("touchend", (e) => {
+      const endX = e.changedTouches[0].clientX;
+      handleSwipe(endX - startX);
+    });
+
+    // Mouse support
+    item.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.clientX;
+    });
+
+    item.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      currentX = e.clientX;
+    });
+
+    item.addEventListener("mouseup", (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      handleSwipe(currentX - startX);
+    });
+
+    item.addEventListener("mouseleave", () => {
+      if (!isDragging) return;
+      isDragging = false;
+      handleSwipe(currentX - startX);
+    });
+  });
+
+  function addSwipeAnimation(direction) {
+    slider.classList.add("swipe-transition");
+    slider.style.transform = `translateX(${direction === 'left' ? '-50px' : '50px'})`;
+
+    setTimeout(() => {
+      slider.style.transform = `translateX(0)`;
+      slider.classList.remove("swipe-transition");
+    }, 150);
+  }
+
+  function handleSwipe(deltaX) {
+    const swipeThreshold = 50;
+    if (deltaX > swipeThreshold) {
+      addSwipeAnimation("right");
+      prevBtn.click();
+    } else if (deltaX < -swipeThreshold) {
+      addSwipeAnimation("left");
+      nextBtn.click();
+    }
   }
 });

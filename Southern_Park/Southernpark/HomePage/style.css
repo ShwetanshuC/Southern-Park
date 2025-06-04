@@ -108,6 +108,10 @@ body
 .box .item {
   min-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -110px;
 }
 
 .box img {
@@ -115,28 +119,36 @@ body
   height: auto;
   object-fit: cover;
   border-radius: 6px;
-  image-rendering: auto;
+  image-rendering: crisp-edges; /* improves clarity for some browsers */
+  display: block;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+  margin-top: -170px;
 }
 
 .buttons button {
+  pointer-events: all;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 18px;
   margin: 0 10px;
-  border-radius: 4px;
+  border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: 0.3s ease;
-  background-color: #F0D8B6;
+  background-color: #B3926F;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .buttons button:hover {
-  background-color: #F0D8B6;
+  background-color: #8e6f54;
+  transform: scale(1.05);
 }
 
 .contact-footer {
