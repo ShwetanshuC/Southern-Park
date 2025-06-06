@@ -36,35 +36,31 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">Instruments</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Baritone</a></li>
+                <li><a class="dropdown-item" href="{% url 'faculty' %}">Baritone</a></li>
                 <li><a class="dropdown-item" href="#">Bassoon</a></li>
                 <li><a class="dropdown-item" href="#">Cello</a></li>
                 <li><a class="dropdown-item" href="#">Clarinet</a></li>
-                <li><a class="dropdown-item" href="#">Drums & Percussion</a></li>
-                <li><a class="dropdown-item" href="#">Electric Bass Guitar</a></li>
-                <li><a class="dropdown-item" href="#">Euphonium</a></li>
-                <li><a class="dropdown-item" href="#">String Bass</a></li>
+                <li><a class="dropdown-item" href="#">Flute</a></li>
+                <li><a class="dropdown-item" href="#">French Horn</a></li>
+                <li><a class="dropdown-item" href="#">Guitar</a></li>
+                <li><a class="dropdown-item" href="#">Jazz Piano</a></li>
+                <li><a class="dropdown-item" href="#">Oboe</a></li>
+                <li><a class="dropdown-item" href="#">Piano</a></li>
+                <li><a class="dropdown-item" href="#">Saxophone</a></li>
                 <li><a class="dropdown-item" href="#">Trombone</a></li>
                 <li><a class="dropdown-item" href="#">Trumpet</a></li>
                 <li><a class="dropdown-item" href="#">Tuba</a></li>
+                <li><a class="dropdown-item" href="#">Ukelele</a></li>
                 <li><a class="dropdown-item" href="#">Viola</a></li>
                 <li><a class="dropdown-item" href="#">Violin</a></li>
                 <li><a class="dropdown-item" href="#">Voice</a></li>
-                <li><a class="dropdown-item" href="#">Flute</a></li>
-                <li><a class="dropdown-item" href="#">French Horn</a></li>
-                <li><a class="dropdown-item" href="#">Guitar & Electric Guitar</a></li>
-                <li><a class="dropdown-item" href="#">Jazz Piano</a></li>
-                <li><a class="dropdown-item" href="#">Oboe</a></li>
-                <li><a class="dropdown-item" href="#">Musikgarten</a></li>
-                <li><a class="dropdown-item" href="{% url 'faculty' %}">Piano</a></li>
-                <li><a class="dropdown-item" href="#">Saxophone</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Enroll</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'calendar' %}">Calendar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Policies</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'policies' %}">Policies</a></li>
             <li class="nav-item mt-3">
-              <button class="btn btn-outline-success" id="bookTrialBtn" type="button">
+              <button class="btn btn-primary" id="bookTrialBtn" type="button">
                 Book a trial lesson!
               </button>
             </li>
@@ -92,7 +88,7 @@
                 </div>
                 <!-- Submit Button (initially hidden) -->
               <div id="submitContainer" class="mt-3 d-none">
-                <button class="btn btn-success" id="submitBtn" type="button">Submit</button>
+                <button class="btn btn-primary" id="submitBtn" type="button">Submit</button>
               </div>
               </div>
             </li>
@@ -107,8 +103,19 @@
 </div>
 
 <div class="consistentmenu">{% block content %} {% endblock %}</div>
+
+<footer class="contact-footer w-100 border-top py-2">
+  <div class="container-fluid d-flex justify-content-start align-items-center flex-nowrap text-center gap-4">
+    <img src="{% static 'Menu/logo.png' %}" alt="Southern Park Logo" class="footer-logo me-4">
+    <div><strong>Phone:</strong> 704-676-1002</div>
+    <div>|</div>
+    <div><strong>Email:</strong> info@southernparkmusic.com</div>
+    <div>|</div>
+    <div><strong>Address:</strong> 4805 Park Rd STE 230, Charlotte, NC 28209</div>
+  </div>
+</footer>
+
+
  
 </body>
 </html>
-
-
