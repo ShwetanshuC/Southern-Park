@@ -2,35 +2,45 @@
 {% load static %}
 {% block title %} My Home Page {% endblock %}
 {% block content %}
+<main>
 <link rel="stylesheet" href="{% static 'Faculty/style.css' %}">
 <div class="container">
-  <!-- PIANO -->
-  <div class="faculty-group">
+  <div class="page">
+    <!-- PIANO -->
+    <div class="faculty-group" data-instrument="Piano">
     <h2 class="section-title">Piano</h2>
     <div class="card-group spaced-cards mt-4">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img1.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img1.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>New Design<br><span>2 hours ago</span></h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quae quos nostrum fuga deleniti vitae?</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img2.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img2.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Mary Len Myers-Cutter<br><span>BMus</span></h3>
           <p>Experienced piano faculty with a focus on classical techniques.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img3.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img3.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Amy Harris<br><span>DMA, MM, BMus</span></h3>
           <p>Dedicated to advancing piano performance and pedagogy.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img4.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img4.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Michael Lehtinen<br><span>DMA, MM, BMus</span></h3>
           <p>Specializes in contemporary piano music and composition.</p>
@@ -39,161 +49,208 @@
     </div>
     <div class="card-group spaced-cards mt-4">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img5.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img5.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Sharon Stricklin<br><span>MM, BMus</span></h3>
           <p>Focuses on jazz piano and improvisation techniques.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img6.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img6.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Celeste Tavera<br><span>BMus</span></h3>
           <p>Passionate about piano pedagogy and music theory.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img1.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img1.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Gregory Thompson<br><span>DMA, MM, BMus</span></h3>
           <p>Expert in classical piano performance and chamber music.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img2.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img2.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Janice Williams<br><span>MM, BMus</span></h3>
           <p>Experienced in piano accompaniment and vocal coaching.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- GUITAR & UKELELE -->
-  <div class="faculty-group">
+  <div class="page">
+    <!-- GUITAR & UKELELE -->
+    <div class="faculty-group" data-instrument="Guitar">
     <h2 class="section-title">Guitar & Ukelele</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img3.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img3.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Mario Barragan<br><span>BMus</span></h3>
           <p>Specialist in classical and contemporary guitar styles.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- VIOLIN & VIOLA -->
-  <div class="faculty-group">
+  <div class="lazy-pages">
+  <div class="page" data-loaded="false">
+    <!-- VIOLIN & VIOLA -->
+    <div class="faculty-group" data-instrument="Violin">
     <h2 class="section-title">Violin & Viola</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img4.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img4.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Marscia Martinez-Mendoza<br><span>BMus</span></h3>
           <p>Dedicated violin and viola instructor with extensive performance experience.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img5.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img5.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Alasondro Linney<br><span>BMus</span></h3>
           <p>Focuses on classical violin and chamber music.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- CELLO -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- CELLO -->
+    <div class="faculty-group" data-instrument="Cello">
     <h2 class="section-title">Cello</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img6.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img6.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Tanya Bechtler<br><span>MM, BMus</span></h3>
           <p>Cello faculty with a passion for solo and ensemble performance.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img1.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img1.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Andrew Werner<br><span>MA, BMus</span></h3>
           <p>Experienced in both classical and contemporary cello techniques.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- CLARINET & SAXOPHONE -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- CLARINET & SAXOPHONE -->
+    <div class="faculty-group" data-instrument="Clarinet">
     <h2 class="section-title">Clarinet & Saxophone</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img2.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img2.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Mark Catoe<br><span>BMusEd</span></h3>
           <p>Faculty member in Piano and Woodwinds.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- FLUTE -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- FLUTE -->
+    <div class="faculty-group" data-instrument="Flute">
     <h2 class="section-title">Flute</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img3.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img3.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Elaina Palada<br><span>MM, BMus</span></h3>
           <p>Flute instructor with expertise in classical and jazz genres.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- OBOE & BASSOON -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- OBOE & BASSOON -->
+    <div class="faculty-group" data-instrument="Oboe">
     <h2 class="section-title">Oboe & Bassoon</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img4.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img4.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Candace Schmitt<br><span>BMus</span></h3>
           <p>Specialist in woodwind instruments with a focus on oboe and bassoon.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- BRASS -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- BRASS -->
+    <div class="faculty-group" data-instrument="Brass">
     <h2 class="section-title">Trumpet, French Horn, Trombone, Baritone, Tuba</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img5.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img5.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Keenan Harmon<br><span>BMus</span></h3>
           <p>Brass instructor with a broad range of expertise across instruments.</p>
         </div>
       </div>
     </div>
+    </div>
   </div>
 
-  <!-- VOICE -->
-  <div class="faculty-group">
+  <div class="page" data-loaded="false">
+    <!-- VOICE -->
+    <div class="faculty-group" data-instrument="Voice">
     <h2 class="section-title">Voice</h2>
     <div class="card-group spaced-cards">
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img6.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img6.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Celeste Tavera<br><span>BMus</span></h3>
           <p>Voice instructor specializing in classical and contemporary singing.</p>
         </div>
       </div>
       <div class="card">
-        <div class="imgBx" style="--img:url('{% static 'Faculty/Teacher_Pictures/img1.jpg' %}');"></div>
+        <div class="imgBx">
+          <img src="{% static 'Faculty/Teacher_Pictures/img1.jpg' %}" loading="lazy" alt="Faculty Image">
+        </div>
         <div class="content">
           <h3>Janice Williams<br><span>MM, BMus</span></h3>
           <p>Experienced vocal coach and performer.</p>
@@ -201,5 +258,14 @@
       </div>
     </div>
   </div>
-</div>
+  </div> <!-- close .lazy-pages -->
+
+
+<!-- Place arrows directly inside body-level structure -->
+<div id="arrow-up">&#8593;</div>
+<div id="arrow-down">&#8595;</div>
+
+</main>
+
+<script src="{% static 'Faculty/script.js' %}"></script>
 {% endblock %}
